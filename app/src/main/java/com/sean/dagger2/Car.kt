@@ -15,6 +15,11 @@ class Car {
         this.engine = engine
     }
 
+    @Inject
+    fun provideCarToRemote(remote: Remote) {
+        remote.providesCar(this)
+    }
+
     fun start() {
         engine.start()
 //        Log.i("ggg", "driving")
