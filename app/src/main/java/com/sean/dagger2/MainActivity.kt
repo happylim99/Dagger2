@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var carComponent = DaggerCarComponent.builder()
-            .powerCapacity(300)
+            .powerCapacity(111)
+            .engineCapacity(222)
             .build()
         carComponent.inject(this)
         car.start()
