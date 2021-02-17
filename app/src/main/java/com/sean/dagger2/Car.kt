@@ -1,6 +1,7 @@
 package com.sean.dagger2
 
 import android.util.Log
+import java.util.*
 import javax.inject.Inject
 
 class Car {
@@ -15,6 +16,6 @@ class Car {
     }
 
     fun start() {
-        Log.i("tagg", "driving")
+        Log.i("ggg", "driving" + Date())
     }
 }
