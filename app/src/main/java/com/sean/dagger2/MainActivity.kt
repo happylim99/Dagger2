@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
     // because main activity is controlled by android
     @Inject
     lateinit var car: Car
+    @Inject
+    lateinit var car1: Car
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,7 +22,9 @@ class MainActivity : AppCompatActivity() {
             .engineCapacity(222)
             .build()
         carComponent.inject(this)
-        car.start()
 
+
+        car.start()
+        car1.start()
     }
 }
