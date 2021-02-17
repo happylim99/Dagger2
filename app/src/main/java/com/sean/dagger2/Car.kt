@@ -16,6 +16,7 @@ class Car {
     }
 
     fun start() {
-        Log.i("ggg", "driving" + Date())
+        engine.start()
+//        Log.i("ggg", "driving")
     }
 }
