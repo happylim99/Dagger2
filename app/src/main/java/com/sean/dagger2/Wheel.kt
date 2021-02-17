@@ -4,8 +4,11 @@ import javax.inject.Inject
 
 class Wheel {
 
-    @Inject
-    constructor() {
+    lateinit var rim: Rim
+    lateinit var tire: Tire
 
+    constructor(rim: Rim, tire: Tire) {
+        this.rim = rim
+        this.tire = tire
     }
 }
