@@ -6,12 +6,14 @@ import javax.inject.Inject
 
 class PetrolEngine: Engine {
 
-    @Inject
-    constructor() {
+    var powerCapacity: Int
 
+    @Inject
+    constructor(powerCapacity: Int) {
+        this.powerCapacity = powerCapacity
     }
 
     override fun start() {
-        Log.i("ggg", "petrol engine start")
+        Log.i("ggg", "petrol engine start, capacity : " + powerCapacity)
     }
 }

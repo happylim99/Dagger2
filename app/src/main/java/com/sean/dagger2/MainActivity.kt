@@ -15,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var carComponent = DaggerCarComponent.create()
+        var carComponent = DaggerCarComponent.builder()
+            .petrolEngineModule(PetrolEngineModule(200)).build()
         carComponent.inject(this)
         car.start()
 
