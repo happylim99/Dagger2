@@ -6,12 +6,12 @@ import javax.inject.Inject
 
 class Car {
 
+    @Inject
     lateinit var wheel: Wheel
     lateinit var engine: Engine
 
     @Inject
-    constructor(wheel: Wheel, engine: Engine) {
-        this.wheel = wheel
+    constructor(engine: Engine) {
         this.engine = engine
     }
 
@@ -21,7 +21,8 @@ class Car {
     }
 
     fun start() {
+        Log.i("ggg", "wheel : " + wheel)
         engine.start()
-//        Log.i("ggg", "driving")
+        Log.i("ggg", "car driving")
     }
 }
