@@ -17,10 +17,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var carComponent = DaggerCarComponent.builder()
-            .powerCapacity(111)
-            .engineCapacity(222)
-            .build()
+        var carComponent = (application as MyApp).carComponent()
+//        var carComponent = DaggerCarComponent.builder()
+//            .powerCapacity(111)
+//            .engineCapacity(222)
+//            .build()
         carComponent.inject(this)
 
         car.start()
